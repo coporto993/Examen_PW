@@ -1,0 +1,5 @@
+[ client]
+database = taller_mecanico
+user = root
+password =
+default-character-set = utf8

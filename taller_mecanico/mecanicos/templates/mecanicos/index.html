@@ -47,14 +47,14 @@
             </div>
             <div class="col-sm-12 col-md-4">
                 <div class="container bg-secondary">
-                    <img width="50%" src="{% static 'icon-1.png' %}" alt="logo auto">
+                    <img width="25%" src="{% static 'icon-1.png' %}" alt="logo auto">
                 </div>
             </div>
     
         </div>
     </div>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="{% url 'index'%}">Inicio</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -89,13 +89,18 @@
               <a style="font-weight: bold;" class="nav-link" href="{%url 'pagina_error'%}" tabindex="-1" aria-disabled="true">Contacto</a>
             </li>
             <li class="nav-item">
-              <a style="font-weight: bold;" class="nav-link" href="{% url 'clientes'%}" tabindex="-1" aria-disabled="true">clientes</a>
+              <a style="font-weight: bold;" class="nav-link" href="{% url 'pagina_error'%}" tabindex="-1" aria-disabled="true">clientes</a>
             </li>
             
           </ul>
           <form class="form-inline my-2 my-lg-0">
             <button onclick="location.href='{% url 'login' %}' " type="button" class="btn btn-warning">Ingresar</button>
           </form>
+          &nbsp;
+          <form class="form-inline my-2 my-lg-0">
+            <button onclick="location.href='{% url 'registro_usuario' %}' " type="button" class="btn btn-warning">Registrar</button>
+          </form>
+          
         </div>
       </nav>
 

@@ -42,12 +42,10 @@ INSTALLED_APPS = [
     'miaplicacion',
     'mecanicos',
     'perfil',
-<<<<<<< HEAD
-    'mecanicoAPI'
-=======
-
->>>>>>> rama_thomas
+    'crispy_forms',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

@@ -17,7 +17,7 @@ from django.urls import path, include
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import index
+from .views import index , registro_usuario
 
 #www.taller_mecanico.cl/mecanicos/crear
 urlpatterns = [
@@ -75,12 +75,11 @@ urlpatterns = [
 
     path('userMecanico/',views.userMecanico,name='userMecanico'),
 
-<<<<<<< HEAD
-=======
     path('login/', views.login, name = 'login'),
 
-    path('clientem',views.clientem,name='clientem')
+    path('clientem/',views.clientem,name='clientem'),
 
->>>>>>> rama_thomas
+    path('registro/',views.registro_usuario,name='registro_usuario')
+
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

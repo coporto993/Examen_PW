@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-sacale=1.0">
+    <meta http-equiv="X-UA-compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>documento</title>
+    {% load crispy_forms_tags %}
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Registro de usuarios</h2>
+                        <br>
+                        <form action="" method="POST">
+                            {% csrf_token%}
+                            {{ form | crispy }}
+                            <input type="reset" class="btn btn-primary" value="Limpiar">
+                            &nbsp;
+                            <input type="submit" class="btn btn-outline-success" value="Registro">
+                        </form> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

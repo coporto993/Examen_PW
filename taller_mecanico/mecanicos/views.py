@@ -1,6 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse
-from .forms import contactoform
+from .forms import contactoform , CustomUserForm
+from django.contrib.auth import login, authenticate
+
+
+
 
 # Create your views here.
 
@@ -116,13 +120,28 @@ def userMecanico(request):
 def publicar(request):
     return render (request, 'mecanicos/publicar.html', {})
 
-<<<<<<< HEAD
-=======
 def login(request):
     return render(request, 'mecanicos/login.html',{} )
 
 def clientem(request):
-    return render(request,'mecanicos/clientem.html',{})
->>>>>>> rama_thomas
+    return render(request,'mecanicos/clientem.html',{} )
+
+def registro_usuario(request):
+    data={
+        'form': CustomUserForm()
+    }
+    if request.method == 'POST':
+        formulario = CustomUserForm(request.POST)
+        if formulario.is_valid():
+            formulario.save()
+            #autenticar y redirigir al login 
+            username = formulario.cleaned_data['username']
+            password = formulario.cleaned_data['password1']
+            user = authenticate(username= username, password=password)
+            return redirect (to='login')
+
+    return render(request,'registration/registro.html',data)
+
+
 
 
